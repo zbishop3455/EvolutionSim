@@ -18,7 +18,7 @@ public class EvolutionDriver extends Canvas implements Runnable{
 	private long timer = 40;
 	private long frameCount = 0;
 	private int test = 100;
-	private int numberOfAnimals = 1;
+	private int numberOfAnimals = 100;
 	boolean running;
 	//create animals
 	Animal animals[] = new Animal[numberOfAnimals];

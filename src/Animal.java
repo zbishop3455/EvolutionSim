@@ -51,6 +51,11 @@ public class Animal {
 	}
 	
 	private void applySteeringForce(float steeringForceDirection, float steeringForceMagnitude){
+		//add the steering force to the current acceleration
+		
+		
+		//magnitude
+		this.heading+= steeringForceDirection * steeringForceMagnitude;
 		
 	}
 	
@@ -65,7 +70,7 @@ public class Animal {
 		this.dy = this.speed * (float)Math.sin(this.heading);
 		
 
-		
+		applySteeringForce((float) -0.01,5);
 		this.dy = this.dy * -1;
 		
 		this.x += this.dx;
