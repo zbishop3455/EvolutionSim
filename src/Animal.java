@@ -13,7 +13,7 @@ public class Animal {
 	int size = 20;
 	int[] xVals = new int[3];
 	int[] yVals = new int[3];
-	double heading =  (Math.PI / 2);
+	double heading =  (2.0 * Math.PI / 3.0);
 	double dx;
 	double dy;
 	
@@ -30,13 +30,13 @@ public class Animal {
 	public void show(Graphics g){
 		//find the center node of the triangle
 		 xVals[1] = (int) (this.x + (this.size * Math.cos(this.heading)));
-	     yVals[1] = (int) (this.y + (this.size * Math.sin(this.heading)));
+	     yVals[1] = (int) (this.y - (this.size * Math.sin(this.heading)));
 
 	     xVals[0] = (int) (this.x + (this.size * Math.cos(this.heading + (2.5*Math.PI/3))));
-	     yVals[0] = (int) (this.y + (this.size * Math.sin(this.heading + (2.5*Math.PI/3))));
+	     yVals[0] = (int) (this.y - (this.size * Math.sin(this.heading + (2.5*Math.PI/3))));
 
 	     xVals[2] = (int) (this.x +  (this.size * Math.cos(this.heading + (3.5*Math.PI/3))));
-	     yVals[2] = (int) (this.y +  (this.size * Math.sin(this.heading + (3.5*Math.PI/3))));
+	     yVals[2] = (int) (this.y -  (this.size * Math.sin(this.heading + (3.5*Math.PI/3))));
 	
 		g.drawPolygon(xVals, yVals,3);
 	}	

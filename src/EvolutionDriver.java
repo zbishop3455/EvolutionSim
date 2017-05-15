@@ -20,7 +20,10 @@ public class EvolutionDriver extends Canvas implements Runnable{
 	private long frameCount = 0;
 	private int test = 100;
 	private int numberOfAnimals = 50;
+	private int numberOfFood = 10;
 	boolean running;
+	//create food
+	Food snacks[] = new Food[numberOfFood];
 	//create animals
 	Animal animals[] = new Animal[numberOfAnimals];
 	
@@ -31,6 +34,12 @@ public class EvolutionDriver extends Canvas implements Runnable{
 		for(int i=0;i<animals.length;i++){
 			animals[i] = new Animal();
 		}
+		//inserts food
+		for(int i=0; i<snacks.length;i++)
+		{
+			snacks[i] = new Food();
+		}
+		
 	}
 	
 	private void render(){
@@ -44,6 +53,9 @@ public class EvolutionDriver extends Canvas implements Runnable{
 		
 		for(int i=0;i<animals.length;i++){
 			animals[i].show(g);
+		}
+		for(int i=0;i<snacks.length;i++){
+			snacks[i].show(g);
 		}
 		
 		g.dispose();
