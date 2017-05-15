@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferStrategy;
-
 import javax.swing.*;
 
 
@@ -19,8 +18,12 @@ public class EvolutionDriver extends Canvas implements Runnable{
 	private long timer = 40;
 	private long frameCount = 0;
 	private int test = 100;
+<<<<<<< HEAD
 	private int numberOfAnimals = 50;
 	private int numberOfFood = 10;
+=======
+	private int numberOfAnimals = 100;
+>>>>>>> a5fbdfb7addd4fb12a39f4d318b1634bad12f95b
 	boolean running;
 	//create food
 	Food snacks[] = new Food[numberOfFood];
@@ -50,9 +53,14 @@ public class EvolutionDriver extends Canvas implements Runnable{
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
+		g.setColor(Color.cyan);
+		g.fillRect(0, 0, masterWidth, masterHeight);
 		
 		for(int i=0;i<animals.length;i++){
-			animals[i].show(g);
+			animals[i].show();
+			g.setColor(Color.ORANGE);
+			g.fillPolygon(animals[i].xVals,animals[i].yVals,3);
+		
 		}
 		for(int i=0;i<snacks.length;i++){
 			snacks[i].show(g);
@@ -63,7 +71,9 @@ public class EvolutionDriver extends Canvas implements Runnable{
 	}
 	
 	private void tick(){
-		
+		for(int i=0;i<animals.length;i++){
+			animals[i].move();
+		}
 	}
 	
 	private void start(){
