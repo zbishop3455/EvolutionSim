@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d60236f-6ec7-46bd-99ca-8dde9d54f49c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Simulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,24 +21,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entity/Animal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="391">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#54#84#0" expanded="true" />
+                <element signature="e#580#581#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
+                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Simulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="656">
+              <caret line="102" column="8" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#87#88#0" expanded="true" />
                 <element signature="e#124#125#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#575#576#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="method#run#0;class#Simulator#0" />
               </folding>
             </state>
           </provider>
@@ -56,11 +68,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entity/Entity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#539#540#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#596#597#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#645#646#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#731#732#0" expanded="true" />
+                <element signature="e#759#760#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#832#833#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
+                <element signature="e#932#933#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,9 +124,10 @@
         <option value="$PROJECT_DIR$/src/EvolutionDriver.java" />
         <option value="$PROJECT_DIR$/src/Window.java" />
         <option value="$PROJECT_DIR$/src/Display.java" />
-        <option value="$PROJECT_DIR$/src/Simulator.java" />
         <option value="$PROJECT_DIR$/src/entity/Food.java" />
+        <option value="$PROJECT_DIR$/src/entity/Animal.java" />
         <option value="$PROJECT_DIR$/src/entity/Entity.java" />
+        <option value="$PROJECT_DIR$/src/Simulator.java" />
       </list>
     </option>
   </component>
@@ -187,7 +218,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5380000" />
+    <option name="totallyTimeSpent" value="7802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -232,16 +263,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvolutionDriver.java" />
-    <entry file="file://$PROJECT_DIR$/src/entity/Animal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Food.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10">
@@ -261,22 +282,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Simulator.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="391">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#87#88#0" expanded="true" />
-            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#54#84#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Simulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="102" column="8" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#87#88#0" expanded="true" />
+            <element signature="e#124#125#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="method#run#0;class#Simulator#0" />
+          </folding>
         </state>
       </provider>
     </entry>

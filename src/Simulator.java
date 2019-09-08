@@ -1,3 +1,7 @@
+import entity.Animal;
+import entity.Entity;
+import javafx.animation.Animation;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 
@@ -11,16 +15,18 @@ public class Simulator implements Runnable{
     private BufferStrategy bs;
     private Thread thread;
 
+    private Entity dude;
+
     public Simulator() {
         display = new Display(width,height , "Evolution Simulator");
     }
 
     private void init() {
-
+        dude = new Animal(100, 100,50, 50);
     }
 
     private void tick(){
-
+    dude.tick();
     }
 
     private void start(){
@@ -94,6 +100,8 @@ public class Simulator implements Runnable{
         // Draw black rect
         g.setColor(new Color(0,0,0));
         g.fillRect(0,0,width,height);
+
+        dude.render(g);
 
         bs.show();
         g.dispose();
