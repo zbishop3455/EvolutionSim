@@ -4,22 +4,19 @@ import java.awt.*;
 
 @SuppressWarnings({ "unused"})
 public class Animal extends Entity {
-    /* Animals will be assigned random DNA that affects how they will find food
-     * Over time, the health of each animal will decline
-     * Animals gain health by eating food
-     *
-     */
+
+    private AnimalGenes genes;
 
 
-    public Animal(int x, int y, int width, int height){
+    public Animal(int x, int y, AnimalGenes genes){
 
-        super(x, y, width, height);
-
+        super(x, y, genes.getSize(), genes.getSize());
+        this.genes = genes;
     }
 
     @Override
     public void render(Graphics g) {
-        g.setColor(Color.ORANGE);
+        g.setColor(genes.getColor());
         g.drawRect(x, y, width, height);
     }
 

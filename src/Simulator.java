@@ -1,5 +1,6 @@
 import entity.Animal;
 import entity.Entity;
+import entity.EntityManager;
 import javafx.animation.Animation;
 
 import java.awt.*;
@@ -15,18 +16,19 @@ public class Simulator implements Runnable{
     private BufferStrategy bs;
     private Thread thread;
 
-    private Entity dude;
+    private EntityManager entityManager;
 
     public Simulator() {
         display = new Display(width,height , "Evolution Simulator");
     }
 
     private void init() {
-        dude = new Animal(100, 100,50, 50);
+        entityManager = new EntityManager();
+        entityManager.addEntity(new Animal(100, 150, 25, 25));
     }
 
     private void tick(){
-    dude.tick();
+        entityManager.tick();
     }
 
     private void start(){
@@ -101,7 +103,7 @@ public class Simulator implements Runnable{
         g.setColor(new Color(0,0,0));
         g.fillRect(0,0,width,height);
 
-        dude.render(g);
+        entityManager.render(g);
 
         bs.show();
         g.dispose();
