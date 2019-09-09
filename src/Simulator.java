@@ -27,7 +27,7 @@ public class Simulator implements Runnable{
         entityManager = new EntityManager();
 
         // Test animal
-        AnimalGenes testGenes = new AnimalGenes(0.5f, 1.0f, 100, 10, 20,3.0f);
+        AnimalGenes testGenes = new AnimalGenes(1.5f, 1.0f, 100, 10, 20,3.0f, 1.0f);
         entityManager.addEntity(new Animal(300, 150, testGenes));
     }
 

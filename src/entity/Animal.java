@@ -9,6 +9,8 @@ public class Animal extends Entity {
     private float xMove;
     private float yMove;
     private float heading;
+    private Point visionPointA;
+    private Point visionPointB;
 
 
     public Animal(int x, int y, AnimalGenes genes){
@@ -17,6 +19,8 @@ public class Animal extends Entity {
         this.genes = genes;
         this.xMove = genes.getSpeed();
         this.yMove = genes.getSpeed();
+        this.visionPointA = new Point(0, 0);
+        this.visionPointB = new Point(0, 0);
     }
 
     @Override
@@ -32,14 +36,20 @@ public class Animal extends Entity {
 
         // Draw Animals vision
         g.setColor(Color.GREEN);
-        g.drawLine((int) x, (int) y, (int) (x + Math.cos(heading + 0.5) * genes.getSeekDistance()), (int) (y + Math.sin(heading + 0.5) * genes.getSeekDistance()));
-        g.drawLine((int) x, (int) y, (int) (x + Math.cos(heading - 0.5) * genes.getSeekDistance()), (int) (y + Math.sin(heading - 0.5) * genes.getSeekDistance()));
+        g.drawLine((int) x, (int) y, visionPointA.x, visionPointA.y);
+        g.drawLine((int) x, (int) y, visionPointB.x, visionPointB.y);
 
     }
 
     @Override
     public void tick() {
-        checkCollision();
+
+        visionPointA.x = (int) (x + Math.cos(heading + (genes.getFieldOfView() / 2)) * genes.getSeekDistance());
+        visionPointA.y = (int) (y + Math.sin(heading + (genes.getFieldOfView() / 2)) * genes.getSeekDistance());
+        visionPointB.x = (int) (x + Math.cos(heading - (genes.getFieldOfView() / 2)) * genes.getSeekDistance());
+        visionPointB.y = (int) (y + Math.sin(heading - (genes.getFieldOfView() / 2)) * genes.getSeekDistance());
+
+        checkAvoidance();
         move();
     }
 
@@ -49,10 +59,32 @@ public class Animal extends Entity {
         yMove = (float) Math.sin(heading) * genes.getSpeed();
         this.x += xMove;
         this.y += yMove;
+    }
+
+    // Checks if walls are in sight
+    private void checkAvoidance() {
+
+
+        if (visionPointA.x <= 0 || visionPointB.x <= 0 || visionPointA.x >= 600 || visionPointB.x >= 590) {
+            this.heading += 0.02f;
+            genes.setColor(Color.RED);
+        }
+
+        else if (visionPointA.y <= 0 || visionPointB.y <= 0 || visionPointA.y >= 600 || visionPointB.y >= 570){
+            this.heading += 0.02f;
+            genes.setColor(Color.RED);
+        }
+
+        else {
+            genes.setColor(Color.MAGENTA);
+        }
+
 
     }
 
-    private void checkCollision() {
+    // Returns true if a given point is in view of this Animal
+    private boolean inView(int x, int y) {
+        return true;
 
     }
 

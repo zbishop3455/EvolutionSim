@@ -16,17 +16,19 @@ public class AnimalGenes {
     private int health; // Health determines how long the Animal can live without food
     private int size;
     private float initialHeading;
+    private float fieldOfView;
 
     private Color color;
     private static final Color DEFAULT_COLOR = Color.CYAN;
 
-    public AnimalGenes(float speed, float turningRate, int seekDistance, int health, int size, float initialHeading) {
+    public AnimalGenes(float speed, float turningRate, int seekDistance, int health, int size, float initialHeading, float fieldOfView) {
         this.speed = speed;
         this.turningRate = turningRate;
         this.seekDistance = seekDistance;
         this.health = health;
         this.size = size;
         this.initialHeading = initialHeading;
+        this.fieldOfView = fieldOfView;
         this.color = DEFAULT_COLOR;
     }
 
@@ -85,4 +87,13 @@ public class AnimalGenes {
     public void setInitialHeading(float heading) {
         this.initialHeading = heading;
     }
+
+    public float getFieldOfView() {
+        return fieldOfView;
+    }
+
+    public void setFieldOfView(float fieldOfView) {
+        this.fieldOfView = fieldOfView;
+    }
+
 }
