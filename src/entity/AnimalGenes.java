@@ -12,18 +12,21 @@ public class AnimalGenes {
 
     private float speed;
     private float turningRate;
-    private int seekRadius; // The radius that the animal can detect food
+    private int seekDistance; // The radius that the animal can detect food
     private int health; // Health determines how long the Animal can live without food
     private int size;
+    private float initialHeading;
+
     private Color color;
     private static final Color DEFAULT_COLOR = Color.CYAN;
 
-    public AnimalGenes(float speed, float turningRate, int seekRadius, int health, int size) {
+    public AnimalGenes(float speed, float turningRate, int seekDistance, int health, int size, float initialHeading) {
         this.speed = speed;
         this.turningRate = turningRate;
-        this.seekRadius = seekRadius;
+        this.seekDistance = seekDistance;
         this.health = health;
         this.size = size;
+        this.initialHeading = initialHeading;
         this.color = DEFAULT_COLOR;
     }
 
@@ -43,12 +46,12 @@ public class AnimalGenes {
         this.turningRate = turningRate;
     }
 
-    public int getSeekRadius() {
-        return seekRadius;
+    public int getSeekDistance() {
+        return seekDistance;
     }
 
-    public void setSeekRadius(int seekRadius) {
-        this.seekRadius = seekRadius;
+    public void setSeekDistance(int seekDistance) {
+        this.seekDistance = seekDistance;
     }
 
     public int getHealth() {
@@ -71,7 +74,15 @@ public class AnimalGenes {
         return color;
     }
 
-    public void setColor(Color c) {
-        this.color = c;
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public float getInitialHeading() {
+        return initialHeading;
+    }
+
+    public void setInitialHeading(float heading) {
+        this.initialHeading = heading;
     }
 }

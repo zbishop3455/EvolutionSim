@@ -5,8 +5,8 @@ import java.awt.*;
 public abstract class Entity {
 
 
-    protected int x;
-    protected int y;
+    protected float x;
+    protected float y;
     protected int width;
     protected int height;
     protected Rectangle bounds;
@@ -23,7 +23,7 @@ public abstract class Entity {
 
     public abstract void tick();
 
-    public int getX() {
+    public float getX() {
         return x;
     }
 
@@ -31,7 +31,7 @@ public abstract class Entity {
         this.x = x;
     }
 
-    public int getY() {
+    public float getY() {
         return y;
     }
 

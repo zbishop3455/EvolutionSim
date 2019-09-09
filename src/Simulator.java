@@ -1,4 +1,5 @@
 import entity.Animal;
+import entity.AnimalGenes;
 import entity.Entity;
 import entity.EntityManager;
 import javafx.animation.Animation;
@@ -24,7 +25,10 @@ public class Simulator implements Runnable{
 
     private void init() {
         entityManager = new EntityManager();
-        entityManager.addEntity(new Animal(100, 150, 25, 25));
+
+        // Test animal
+        AnimalGenes testGenes = new AnimalGenes(0.5f, 1.0f, 100, 10, 20,3.0f);
+        entityManager.addEntity(new Animal(300, 150, testGenes));
     }
 
     private void tick(){
